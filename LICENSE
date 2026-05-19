@@ -1,41 +1,84 @@
-MoldEZ License Agreement
-========================
-Mark IV, September 2025
+SOFTWARE LICENSE AGREEMENT
+MoldEZ — Professional Culture Analysis Solution
+Version 4.0 | Truman State University | 2026
 
-Copyright (c) 2025 Mohammed Ayan Mahmood and Truman State University. All rights reserved.
 
-1. Grant of License
--------------------
-Permission is hereby granted, free of charge, to any person obtaining a copy of MoldEZ
-(the "Software") to use the Software for non-commercial academic and research purposes,
-subject to the following conditions:
+1. Copyright & Funding
 
-2. Restrictions
----------------
-- The Software may not be used for commercial purposes without prior written permission from
-  Truman State University.
-- Redistribution of the Software, in source or binary form, is prohibited without express
-  permission from the copyright holders.
-- Modification of the Software is permitted for personal or academic use, but modified versions
-  may not be distributed without permission.
+Copyright © 2026 Office of Student Research, Truman State University. MoldEZ
+was developed under the TruScholars Summer Undergraduate Research Program.
+All rights reserved.
 
-3. Disclaimer of Warranty
--------------------------
-The Software is provided "as is," without warranty of any kind, express or implied, including
-but not limited to the warranties of merchantability, fitness for a particular purpose, and
-noninfringement. In no event shall the copyright holders be liable for any claim, damages, or
-other liability arising from the use of the Software.
 
-4. Acknowledgment
-----------------
-Users of the Software must acknowledge Truman State University and Mohammed Ayan Mahmood in
-any publications or presentations resulting from its use.
+2. Intellectual Property Ownership
 
-5. Contact
-----------
-For inquiries regarding commercial use or redistribution, contact:
-Mohammed Ayan Mahmood
-Truman State University
-Email: es65721@truman.edu
+The intellectual property of MoldEZ is strictly owned by the following
+individuals, listed in descending order of contribution:
 
-End of License
+    Mohammed Ayan Mahmood — Primary Developer
+    Department of Chemistry, Truman State University
+
+    Dr. Kafi R. Rahman
+    Department of Computer and Data Sciences, Truman State University
+
+    Dr. Hajeewaka C. Mendis
+    Department of Agricultural and Biological Sciences, Truman State University
+
+
+3. Project Contributors
+
+The following individuals contributed as developers of associated computational
+models (computer vision and segmentation assets), listed in descending order
+of contribution:
+
+    M. Raahim, M. T. Ibn Alam, A. Bukhari, M. McGowin, H. Momeni, E. Thompson
+
+    Note: Contributor status does not confer intellectual property rights.
+
+
+4. Terms of Use
+
+Permission is granted to faculty, staff, and students of Truman State University
+to use MoldEZ solely for internal academic and laboratory research purposes.
+The following are expressly prohibited:
+
+    (a) Commercial use, sale, or redistribution of the software or any derivative.
+    (b) Modification, reverse engineering, or sublicensing without written consent
+        from the IP owners.
+    (c) Distribution outside Truman State University without prior authorization.
+
+
+5. Third-Party Library Licenses
+
+MoldEZ incorporates several open-source libraries, each used solely for
+internal academic research and compatible with this Agreement's non-commercial
+terms. All rights in these libraries remain with their respective owners.
+
+    tkinter (PSF License), Pillow/PIL (MIT-CMU), NumPy (BSD), SciPy (BSD),
+    Matplotlib (BSD-compatible), OpenCV/cv2 (Apache 2.0, v4.5.0+), ReportLab
+    (BSD), and tkinterdnd2 (Public Domain) are used for GUI, image processing,
+    computation, visualization, and report generation. Roboflow (Apache 2.0
+    client SDK) is used for AI-assisted dish detection and culture segmentation.
+    pillow-heif (BSD-3-Clause) is used for HEIC/HEIF image support; its bundled
+    libheif library carries GPL-2.0+ terms, which are compatible with the
+    current internal academic deployment but must be reviewed if distribution
+    is ever expanded.
+
+    No third-party library listed above grants any rights to MoldEZ's own
+    source code, algorithms, trained models, or compiled outputs beyond the
+    terms set forth in this Agreement.
+
+
+6. Disclaimer of Warranty
+
+MoldEZ is provided "as is" without warranty of any kind. The IP owners and
+Truman State University shall not be liable for any direct, indirect, or
+incidental damages arising from use of this software.
+
+
+7. Governing Law
+
+This Agreement is governed by the laws of the State of Missouri, United States.
+
+
+Office of Student Research · Truman State University · Kirksville, MO · 2026
