@@ -40,12 +40,12 @@ tkinter · Roboflow · Pillow · OpenCV · NumPy · SciPy · Matplotlib · Repor
 
 ## Authors
 
-**Mohammed Ayan Mahmood** — Primary Developer, Dept. of Chemistry  
-**Dr. Kafi R. Rahman** — Dept. of Computer and Data Sciences  
-**Dr. Hajeewaka C. Mendis** — Dept. of Agricultural and Biological Sciences  
+**Mohammed Ayan Mahmood** - Primary Developer, Dept. of Chemistry  
+**Dr. Kafi R. Rahman** - Dept. of Computer and Data Sciences  
+**Dr. Hajeewaka C. Mendis** - Dept. of Agricultural and Biological Sciences  
 
 Contributors: M. Raahim, M. T. Ibn Alam, A. Bukhari, M. McGowin, H. Momeni, E. Thompson
 
 ## License
 
-© 2026 Office of Student Research, Truman State University. See [LICENSE](LICENSE) for terms.
+© 2026 Office of Student Research, Truman State University. See [LICENSE](license.txt) for terms.
