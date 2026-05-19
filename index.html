@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="MoldEZ is a desktop application for petri dish mold and culture analysis with AI-assisted detection, measurement, reporting, and session workflows.">
+    <title>MoldEZ</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__content">
+          <img class="hero__brand" src="banner.png" alt="MoldEZ">
+          <div class="hero__copy">
+            <p class="eyebrow">Professional culture analysis</p>
+            <h1 id="hero-title">MoldEZ</h1>
+            <p class="lede">
+              AI-assisted desktop software for detecting petri dishes, measuring
+              mold coverage, comparing sessions, and exporting analysis reports.
+            </p>
+            <div class="actions" aria-label="Primary links">
+              <a class="button button--primary" href="https://github.com/researchbyayan/MoldEZ">
+                View on GitHub
+              </a>
+              <a class="button button--secondary" href="#features">
+                Explore Features
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section" aria-labelledby="features-title">
+        <div class="section__header">
+          <p class="eyebrow">Workflow</p>
+          <h2 id="features-title">Built for repeatable image analysis</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <h3>AI Detection</h3>
+            <p>Uses Roboflow models to identify dishes and culture regions from selected or captured images.</p>
+          </article>
+          <article>
+            <h3>Measurement</h3>
+            <p>Calculates plate diameter, culture area, coverage percentage, and pixel-based metrics.</p>
+          </article>
+          <article>
+            <h3>Sessions</h3>
+            <p>Save, load, and compare analyses across time points for organized experimental tracking.</p>
+          </article>
+          <article>
+            <h3>Reports</h3>
+            <p>Export PDF reports with results, visual overlays, trends, and analysis metadata.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--split" aria-labelledby="requirements-title">
+        <div>
+          <p class="eyebrow">Requirements</p>
+          <h2 id="requirements-title">Desktop-first software</h2>
+        </div>
+        <div class="requirements">
+          <p>Packaged builds are intended for desktop use. Roboflow model initialization requires internet access.</p>
+          <ul>
+            <li>Windows packaged application support</li>
+            <li>Optional webcam capture workflow</li>
+            <li>Python source available for development builds</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Developed by Mohammed Ayan Mahmood</span>
+      <span>Powered by Truman State University</span>
+    </footer>
+  </body>
+</html>
