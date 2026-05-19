@@ -1,4 +1,4 @@
-# MoldEZ - Professional Culture Analysis Solution
+# MoldEZ - Professional Culture Analysis Solution 
 
 MoldEZ is a desktop application for automated mold culture analysis. It uses computer vision to detect petri dishes, segment fungal colonies, and generate structured PDF reports, replacing tedious manual measurement in laboratory workflows.
 
