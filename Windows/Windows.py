@@ -1468,7 +1468,7 @@ class MoldEZAnalyzer:
                 _apply_light_section(getattr(self, ref))
 
     def update_banner(self):
-        banner_name = "banner-dark.png" if self.dark_mode.get() else "banner.png"
+        banner_name = "banner_dark.png" if self.dark_mode.get() else "banner.png"
         banner_photo = None
         try:
             banner_path = resource_path(banner_name)

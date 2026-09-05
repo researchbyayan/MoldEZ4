@@ -548,7 +548,7 @@ class DetectionWorker(QThread):
 
 # Native transparent borderless splash screen
 class SplashScreen(QWidget):
-    def __init__(self, image_name="SplashScreen.png"):
+    def __init__(self, image_name="splash_screen.png"):
         super().__init__()
         self.setWindowFlags(Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint | Qt.SubWindow)
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -762,7 +762,7 @@ class MoldEZAnalyzer(QMainWindow):
         self.refresh_visualization()
         
     def update_banner(self):
-        banner_name = "banner-dark.png" if self.dark_mode else "banner.png"
+        banner_name = "banner_dark.png" if self.dark_mode else "banner.png"
         bg_col = self._header_bg()
         
         try:
@@ -2120,7 +2120,7 @@ if __name__ == "__main__":
         app.setWindowIcon(QIcon(app_icon_path))
             
     # Splash screen
-    splash = SplashScreen("SplashScreen.png")
+    splash = SplashScreen("splash_screen.png")
     splash.show()
     app.processEvents()
     
