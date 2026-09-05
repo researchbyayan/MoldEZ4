@@ -31,7 +31,7 @@ a {
   align-items: center;
   background:
     linear-gradient(90deg, rgba(9, 21, 30, 0.82), rgba(9, 21, 30, 0.56)),
-    url("banner-dark.png") center / cover no-repeat;
+    url("banner_dark.png") center / cover no-repeat;
   color: #ffffff;
   padding: 48px 24px;
 }
