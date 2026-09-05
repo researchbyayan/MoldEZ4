@@ -96,14 +96,14 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   font-family: var(--sans);
   font-size: 0.72rem;
   font-weight: 800;
-  color: #ffffff;
-  background: var(--red);
+  color: var(--red);
+  background: var(--red-soft);
+  border: 1px solid rgba(209, 20, 20, 0.20);
   padding: 5px 10px;
   border-radius: 6px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0 0 20px;
-  box-shadow: 0 6px 14px rgba(209, 20, 20, 0.22);
 }
 .nav__links {
   display: flex;
