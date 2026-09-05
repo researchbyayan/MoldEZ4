@@ -3,134 +3,310 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="MoldEZ is a desktop application for petri dish mold and culture analysis with AI-assisted detection, measurement, reporting, and session workflows. Download the Windows installer.">
+    <meta name="description" content="MoldEZ is a desktop application for petri dish and culture analysis with AI-assisted detection, measurement, session comparison, and PDF reporting. Download the Windows installer.">
+    <meta name="theme-color" content="#ffffff">
     <meta property="og:title" content="MoldEZ — AI-assisted culture analysis">
-    <meta property="og:description" content="Detect petri dishes, measure mold coverage, compare sessions, and export reports. Download for Windows.">
+    <meta property="og:description" content="Detect petri dishes, measure mold coverage, compare sessions over time, and export analysis reports. Download for Windows.">
     <meta property="og:image" content="mascot.png">
-    <title>MoldEZ</title>
+    <title>MoldEZ — AI-assisted culture analysis</title>
     <link rel="icon" type="image/png" href="mascot.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="nav" aria-label="Primary">
-      <a class="nav__brand" href="#top">
-        <img src="mascot.png" alt="" width="34" height="31">
-        <span>MoldEZ</span>
+      <a class="nav__brand" href="#top" aria-label="MoldEZ home">
+        <img src="mascot.png" alt="" width="36" height="33">
+        <span class="nav__wordmark">MoldEZ</span>
+        <span class="nav__tag">Mark IV</span>
       </a>
-      <nav class="nav__links">
+      <nav class="nav__links" aria-label="Sections">
         <a href="#features">Features</a>
+        <a href="#workflow">Workflow</a>
         <a href="#download">Download</a>
-        <a href="https://github.com/researchbyayan/MoldEZ4" target="_blank" rel="noopener">GitHub</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/researchbyayan/MoldEZ4" target="_blank" rel="noopener" class="nav__gh">
+          GitHub
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="hero__grid-bg"></div>
+          <div class="hero__glow hero__glow--red"></div>
+          <div class="hero__glow hero__glow--green"></div>
+        </div>
         <div class="hero__grid">
           <div class="hero__copy">
-            <p class="eyebrow"><span class="dot"></span> Version 4.0 &middot; Mark IV</p>
-            <h1 id="hero-title">Culture analysis,<br>made <span class="hl">EZ</span>.</h1>
+            <p class="chip">
+              <span class="chip__pulse" aria-hidden="true"></span>
+              v4.0 &middot; Mark IV &middot; Windows installer live
+            </p>
+            <h1>Culture analysis,<br><span class="hl">made&nbsp;EZ</span>.</h1>
             <p class="lede">
-              AI-assisted desktop software for detecting petri dishes, measuring
-              mold coverage, comparing sessions over time, and exporting clean
-              analysis reports.
+              A desktop application for petri dish and culture research.
+              Detect plates, measure mold coverage, compare sessions over time,
+              and export publication-ready PDF reports — all on your machine.
             </p>
             <div class="actions">
-              <a class="button button--primary" href="https://github.com/researchbyayan/MoldEZ4/releases/download/windows-v4.0/MoldEZ_Setup_Windows_v4.0.exe">
-                <span class="button__main">Download for Windows</span>
-                <span class="button__sub">v4.0 &middot; installer &middot; 145 MB</span>
+              <a class="btn btn--primary" href="https://github.com/researchbyayan/MoldEZ4/releases/download/windows-v4.0/MoldEZ_Setup_Windows_v4.0.exe">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.7L10.2 4.7v7.3H3V5.7zm0 12.6l7.2 1V13H3v5.3zm8.4 1.2l9.6 1.4V13h-9.6v6.5zm0-15.5l9.6-1.4V12h-9.6V4z"/></svg>
+                <span class="btn__stack">
+                  <span class="btn__main">Download for Windows</span>
+                  <span class="btn__sub">v4.0 · installer · 145 MB</span>
+                </span>
               </a>
-              <a class="button button--ghost" href="#download">Other platforms</a>
+              <a class="btn btn--ghost" href="#download">Other platforms</a>
             </div>
-            <p class="fineprint">Free &middot; Windows 10 &amp; 11 &middot; internet required for AI model init</p>
+            <div class="hero__trust">
+              <span class="trust"><span class="trust__dot trust__dot--ok"></span> Windows 10 &amp; 11</span>
+              <span class="trust"><span class="trust__dot trust__dot--soon"></span> macOS coming soon</span>
+              <span class="trust"><span class="trust__dot"></span> Developed at Truman State</span>
+            </div>
           </div>
-          <div class="hero__art">
-            <img class="hero__logo" src="mascot.png" alt="MoldEZ Mark IV logo" width="440" height="406">
+          <div class="hero__art" aria-hidden="true">
+            <div class="hero__mascot-wrap">
+              <svg class="hero__rings" viewBox="0 0 520 520" aria-hidden="true">
+                <defs>
+                  <radialGradient id="petriGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#1fbf3d" stop-opacity="0.20"/>
+                    <stop offset="70%" stop-color="#1fbf3d" stop-opacity="0.03"/>
+                    <stop offset="100%" stop-color="#1fbf3d" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <circle cx="260" cy="260" r="240" fill="url(#petriGrad)"/>
+                <circle cx="260" cy="260" r="200" fill="none" stroke="#d11414" stroke-opacity="0.14" stroke-dasharray="2 8"/>
+                <circle cx="260" cy="260" r="150" fill="none" stroke="#1b2129" stroke-opacity="0.06"/>
+                <circle cx="260" cy="260" r="110" fill="none" stroke="#1b2129" stroke-opacity="0.05"/>
+              </svg>
+              <img class="hero__mascot" src="mascot.png" alt="" width="440" height="406">
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="features" class="section" aria-labelledby="features-title">
-        <div class="section__header">
-          <p class="eyebrow">Workflow</p>
-          <h2 id="features-title">Built for repeatable image analysis</h2>
+      <!-- STATS STRIP -->
+      <section class="stats" aria-label="At a glance">
+        <div class="stats__row">
+          <div class="stat"><span class="stat__num">4</span><span class="stat__label">Core modules</span></div>
+          <div class="stat stat--divider"><span class="stat__num">1-click</span><span class="stat__label">Windows install</span></div>
+          <div class="stat stat--divider"><span class="stat__num">PDF</span><span class="stat__label">Report export</span></div>
+          <div class="stat stat--divider"><span class="stat__num">Local</span><span class="stat__label">Runs on your machine</span></div>
         </div>
-        <div class="feature-grid">
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="section">
+        <div class="section__head">
+          <p class="eyebrow"><span class="eyebrow__num">01</span> Features</p>
+          <h2>Built for repeatable image analysis.</h2>
+          <p class="section__sub">Four modules that together take a raw plate image to a shareable, versioned analysis.</p>
+        </div>
+        <div class="grid grid--4">
           <article class="card">
+            <div class="card__icon card__icon--red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><circle cx="11" cy="11" r="2.5"/></svg>
+            </div>
             <h3>AI Detection</h3>
-            <p>Uses Roboflow models to identify dishes and culture regions from selected or captured images.</p>
+            <p>Roboflow-hosted models locate petri dishes and culture regions from imported images or a live webcam capture.</p>
           </article>
           <article class="card">
+            <div class="card__icon card__icon--grey">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12l10 10 10-10L12 2 2 12z"/><path d="M7 12h2M11 12h2M15 12h2"/></svg>
+            </div>
             <h3>Measurement</h3>
-            <p>Calculates plate diameter, culture area, coverage percentage, and pixel-based metrics.</p>
+            <p>Plate diameter, culture area, coverage percentage, and pixel-space metrics — all computed automatically.</p>
           </article>
           <article class="card">
+            <div class="card__icon card__icon--green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5M16 4v5"/></svg>
+            </div>
             <h3>Sessions</h3>
-            <p>Save, load, and compare analyses across time points for organized experimental tracking.</p>
+            <p>Save each analysis, then load and compare across time points to track colony growth in a structured way.</p>
           </article>
           <article class="card">
-            <h3>Reports</h3>
-            <p>Export PDF reports with results, visual overlays, trends, and analysis metadata.</p>
+            <div class="card__icon card__icon--red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l5 5v13a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+            </div>
+            <h3>PDF Reports</h3>
+            <p>Export publication-ready PDFs with visual overlays, per-session metrics, trend charts, and metadata.</p>
           </article>
         </div>
       </section>
 
-      <section id="download" class="section" aria-labelledby="download-title">
-        <div class="section__header">
-          <p class="eyebrow">Get MoldEZ</p>
-          <h2 id="download-title">Download the installer</h2>
-          <p class="section__note">No build steps — download, run the installer, and launch. The AI model initializes on first use and needs an internet connection.</p>
+      <!-- WORKFLOW -->
+      <section id="workflow" class="section section--tinted">
+        <div class="section__head">
+          <p class="eyebrow"><span class="eyebrow__num">02</span> How it works</p>
+          <h2>From a raw plate to a signed report — in four steps.</h2>
+          <p class="section__sub">Each step is a screen in the app. No terminals, no scripts.</p>
         </div>
-        <div class="download-grid">
-          <article class="dl-card dl-card--ready">
-            <div class="dl-card__os">Windows</div>
-            <p class="dl-card__meta">v4.0 &middot; 64-bit installer &middot; 145 MB</p>
-            <a class="button button--primary button--block" href="https://github.com/researchbyayan/MoldEZ4/releases/download/windows-v4.0/MoldEZ_Setup_Windows_v4.0.exe">
+        <ol class="timeline">
+          <li class="timeline__step">
+            <span class="timeline__num">1</span>
+            <h3>Capture</h3>
+            <p>Load an image from disk, or capture directly from a connected webcam mounted over the plate.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__num">2</span>
+            <h3>Detect</h3>
+            <p>The AI model returns bounding boxes for the plate and mold regions. Overlays render on the source image.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__num">3</span>
+            <h3>Measure &amp; Save</h3>
+            <p>Coverage, area, and diameter are computed. Save the analysis as a session with your notes and timestamp.</p>
+          </li>
+          <li class="timeline__step">
+            <span class="timeline__num">4</span>
+            <h3>Compare &amp; Export</h3>
+            <p>Load prior sessions to see growth trends, then export a PDF report with overlays and charts.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- TECH -->
+      <section class="section section--tech">
+        <div class="section__head">
+          <p class="eyebrow"><span class="eyebrow__num">03</span> Under the hood</p>
+          <h2>Built with tools researchers already trust.</h2>
+        </div>
+        <ul class="chipset" aria-label="Technologies used">
+          <li>Python</li>
+          <li>Roboflow AI models</li>
+          <li>Local desktop runtime</li>
+          <li>PDF report generator</li>
+          <li>Webcam capture</li>
+          <li>Session serialization</li>
+        </ul>
+      </section>
+
+      <!-- DOWNLOAD -->
+      <section id="download" class="section">
+        <div class="section__head">
+          <p class="eyebrow"><span class="eyebrow__num">04</span> Get MoldEZ</p>
+          <h2>Download the installer.</h2>
+          <p class="section__sub">No build steps. Download, run, launch. First-run AI model init needs an internet connection.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="dl dl--ready">
+            <span class="dl__badge">Available now</span>
+            <div class="dl__os">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.7L10.2 4.7v7.3H3V5.7zm0 12.6l7.2 1V13H3v5.3zm8.4 1.2l9.6 1.4V13h-9.6v6.5zm0-15.5l9.6-1.4V12h-9.6V4z"/></svg>
+              Windows
+            </div>
+            <p class="dl__meta">v4.0 · 64-bit installer · 145 MB</p>
+            <a class="btn btn--primary btn--block" href="https://github.com/researchbyayan/MoldEZ4/releases/download/windows-v4.0/MoldEZ_Setup_Windows_v4.0.exe">
               Download .exe
             </a>
-            <p class="dl-card__hint">Windows 10 and 11</p>
+            <p class="dl__hint">Windows 10 · Windows 11</p>
           </article>
-          <article class="dl-card">
-            <div class="dl-card__os">macOS</div>
-            <p class="dl-card__meta">Universal build</p>
-            <span class="button button--disabled button--block" aria-disabled="true">Coming soon</span>
-            <p class="dl-card__hint">In preparation</p>
+          <article class="dl">
+            <span class="dl__badge dl__badge--muted">In preparation</span>
+            <div class="dl__os">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 2.4c-.9.1-2 .7-2.7 1.5-.6.7-1.1 1.7-.9 2.7 1 .1 2-.5 2.6-1.2.6-.8 1.1-1.8 1-3zM19.7 17.3c-.5 1.2-.8 1.7-1.5 2.7-.9 1.4-2.2 3.1-3.9 3.1-1.5 0-1.9-1-3.9-1-2 0-2.5 1-3.9 1-1.7 0-2.9-1.5-3.9-2.9-2.6-3.9-2.9-8.4-1.3-10.8 1.1-1.7 2.9-2.7 4.6-2.7 1.7 0 2.8 1 4.2 1 1.4 0 2.2-1 4.2-1 1.5 0 3.1.8 4.2 2.2-3.7 2-3.1 7.3.2 8.4z"/></svg>
+              macOS
+            </div>
+            <p class="dl__meta">Universal build · in preparation</p>
+            <span class="btn btn--disabled btn--block" aria-disabled="true">Coming soon</span>
+            <p class="dl__hint">Follow the repo for release notes</p>
           </article>
-          <article class="dl-card">
-            <div class="dl-card__os">Source</div>
-            <p class="dl-card__meta">Python &middot; for developers</p>
-            <a class="button button--ghost button--block" href="https://github.com/researchbyayan/MoldEZ4" target="_blank" rel="noopener">View on GitHub</a>
-            <p class="dl-card__hint">Windows.py &amp; MacOS.py</p>
+          <article class="dl">
+            <span class="dl__badge dl__badge--muted">For developers</span>
+            <div class="dl__os">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
+              Source
+            </div>
+            <p class="dl__meta">Python source · Windows.py &amp; MacOS.py</p>
+            <a class="btn btn--ghost btn--block" href="https://github.com/researchbyayan/MoldEZ4" target="_blank" rel="noopener">View on GitHub</a>
+            <p class="dl__hint">Read the code, file issues, contribute</p>
           </article>
         </div>
       </section>
 
-      <section class="section section--split" aria-labelledby="requirements-title">
-        <div>
-          <p class="eyebrow">Requirements</p>
-          <h2 id="requirements-title">Desktop-first software</h2>
+      <!-- FAQ -->
+      <section id="faq" class="section section--tinted">
+        <div class="section__head">
+          <p class="eyebrow"><span class="eyebrow__num">05</span> FAQ</p>
+          <h2>Common questions.</h2>
         </div>
-        <div class="requirements">
-          <p>Packaged builds are intended for desktop use. Roboflow model initialization requires internet access.</p>
-          <ul>
-            <li>Windows 10 / 11 packaged application</li>
-            <li>Optional webcam capture workflow</li>
-            <li>Python source available for development builds</li>
-          </ul>
+        <div class="faq">
+          <details>
+            <summary>Does MoldEZ send my images to a server?</summary>
+            <p>The AI model is initialized over the network on first run. The application runs on your desktop; results, sessions, and reports stay on your machine.</p>
+          </details>
+          <details>
+            <summary>Do I need to install Python to use it?</summary>
+            <p>No. The Windows installer bundles everything needed. Python source is only relevant if you want to run or modify the code yourself.</p>
+          </details>
+          <details>
+            <summary>What image formats work?</summary>
+            <p>Common still-image formats (JPG, PNG) captured either from disk or from a connected webcam.</p>
+          </details>
+          <details>
+            <summary>When is the macOS build coming?</summary>
+            <p>The macOS source lives in the repo and a packaged build is in preparation. It will be posted to the same Releases page when ready.</p>
+          </details>
+          <details>
+            <summary>How do I report a bug or request a feature?</summary>
+            <p>Open an issue on the <a href="https://github.com/researchbyayan/MoldEZ4/issues" target="_blank" rel="noopener">GitHub repository</a>.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- CTA BAND -->
+      <section class="cta">
+        <div class="cta__inner">
+          <div>
+            <h2>Ready to analyze your first plate?</h2>
+            <p>Install in under a minute. No account, no configuration.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="https://github.com/researchbyayan/MoldEZ4/releases/download/windows-v4.0/MoldEZ_Setup_Windows_v4.0.exe">
+            Download for Windows
+          </a>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="footer__row">
-        <img src="mascot.png" alt="" width="26" height="24">
-        <span>MoldEZ &middot; Mark IV</span>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__row">
+            <img src="mascot.png" alt="" width="30" height="28">
+            <span class="footer__wordmark">MoldEZ</span>
+            <span class="nav__tag">Mark IV</span>
+          </div>
+          <p class="footer__blurb">AI-assisted desktop software for petri dish and culture analysis.</p>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h4>Product</h4>
+            <a href="#features">Features</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#download">Download</a>
+          </div>
+          <div>
+            <h4>Project</h4>
+            <a href="https://github.com/researchbyayan/MoldEZ4" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://github.com/researchbyayan/MoldEZ4/releases" target="_blank" rel="noopener">Releases</a>
+            <a href="https://github.com/researchbyayan/MoldEZ4/issues" target="_blank" rel="noopener">Issues</a>
+          </div>
+          <div>
+            <h4>Credits</h4>
+            <span>Mohammed Ayan Mahmood</span>
+            <span>Truman State University</span>
+          </div>
+        </div>
       </div>
-      <div class="footer__row footer__meta">
-        <span>Developed by Mohammed Ayan Mahmood</span>
-        <span>Powered by Truman State University</span>
+      <div class="footer__bottom">
+        <span>© 2026 MoldEZ</span>
+        <span>Mark IV · v4.0</span>
       </div>
     </footer>
   </body>
