@@ -64,7 +64,7 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 18px clamp(20px, 5vw, 56px);
+  padding: 12px clamp(20px, 5vw, 56px);
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
@@ -76,12 +76,12 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   gap: 12px;
 }
 .nav__mascot {
-  height: 46px;
+  height: 38px;
   width: auto;
   display: block;
 }
 .nav__wordmark {
-  height: 40px;
+  height: 33px;
   width: auto;
   display: block;
   align-self: flex-end;
@@ -115,10 +115,10 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .nav__links {
   display: flex;
   align-items: center;
-  gap: clamp(16px, 3vw, 36px);
+  gap: clamp(14px, 3vw, 30px);
   font-weight: 600;
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 0.94rem;
 }
 .nav__links a { transition: color 0.15s ease; }
 .nav__links a:hover { color: var(--ink); }
