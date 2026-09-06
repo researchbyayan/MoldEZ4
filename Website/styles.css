@@ -136,14 +136,14 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black, transparent 75%);
   opacity: 0.55;
 }
-.hero__glow { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.55; }
+.hero__glow { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.8; }
 .hero__glow--red {
   width: 640px; height: 640px; right: -140px; top: -180px;
-  background: radial-gradient(circle, rgba(176, 184, 196, 0.30), transparent 65%);
+  background: radial-gradient(circle, rgba(150, 160, 176, 0.60), transparent 65%);
 }
 .hero__glow--green {
   width: 480px; height: 480px; left: -120px; bottom: -160px;
-  background: radial-gradient(circle, rgba(205, 211, 219, 0.22), transparent 65%);
+  background: radial-gradient(circle, rgba(168, 177, 190, 0.45), transparent 65%);
 }
 .hero__grid {
   width: min(1220px, 100%);
