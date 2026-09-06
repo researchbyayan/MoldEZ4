@@ -603,3 +603,37 @@ footer { background: var(--panel); border-top: 1px solid var(--line-2); }
   .stats__row { grid-template-columns: 1fr 1fr; gap: 16px; padding: 18px 20px; }
   .footer__cols { grid-template-columns: 1fr 1fr; }
 }
+
+/* ---------- Animated metallic sheen (page-wide) ---------- */
+@keyframes metal-sweep {
+  0%   { transform: translate3d(-55%, -12%, 0) rotate(8deg); }
+  100% { transform: translate3d(55%, 12%, 0) rotate(8deg); }
+}
+@keyframes metal-hero-drift {
+  0%   { background-position: 0% 0%, 0% 0%; }
+  100% { background-position: 120% 60%, 40% 30%; }
+}
+body { position: relative; }
+/* soft light band that slowly travels across everything */
+body::after {
+  content: ""; position: fixed; inset: -25% -35%;
+  pointer-events: none; z-index: 40;
+  background: linear-gradient(105deg,
+    rgba(255,255,255,0) 40%,
+    rgba(255,255,255,0.28) 48%,
+    rgba(201,209,220,0.16) 50%,
+    rgba(255,255,255,0.28) 52%,
+    rgba(255,255,255,0) 60%);
+  animation: metal-sweep 14s ease-in-out infinite alternate;
+  will-change: transform;
+}
+/* keep the hero sheen alive too */
+.hero__bg::after {
+  background-size: 200% 200%, 200% 200%;
+  animation: metal-hero-drift 18s ease-in-out infinite alternate;
+  will-change: background-position;
+}
+@media (prefers-reduced-motion: reduce) {
+  body::after { animation: none; }
+  .hero__bg::after { animation: none; }
+}
