@@ -637,3 +637,7 @@ body::after {
   body::after { animation: none; }
   .hero__bg::after { animation: none; }
 }
+
+/* keep images above the animated sheen (sheen sits behind them) */
+.hero__art, .hero__art-img { position: relative; z-index: 41; }
+img { position: relative; z-index: 41; }
