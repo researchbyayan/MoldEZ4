@@ -72,13 +72,14 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 }
 .nav__brand {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
 }
 .nav__mascot {
-  height: 44px;
-  width: 44px;
+  height: 48px;
+  width: auto;
   display: block;
+  margin-top: -2px;
 }
 .nav__wordmark {
   height: 32px;
