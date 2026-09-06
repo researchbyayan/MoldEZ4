@@ -294,7 +294,7 @@ h1 .hl::after {
 .btn--lg { padding: 18px 30px; font-size: 1.05rem; }
 
 /* ---------- Stats strip ---------- */
-.stats { border-bottom: 1px solid var(--line-2); background: var(--panel); }
+.stats { border-bottom: 1px solid var(--line-2); background: rgba(255,255,255,0.70); }
 .stats__row {
   width: min(1220px, 100%); margin: 0 auto;
   padding: 22px clamp(20px, 5vw, 56px);
@@ -321,7 +321,7 @@ h1 .hl::after {
 }
 .section > * { max-width: 1220px; margin-left: auto; margin-right: auto; }
 .section--tinted {
-  background: linear-gradient(180deg, var(--surface) 0%, #ffffff 100%);
+  background: linear-gradient(180deg, rgba(238,240,244,0.70) 0%, rgba(255,255,255,0.45) 100%);
   border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2);
 }
 .section--tech .chipset { max-width: 900px; }
@@ -560,7 +560,7 @@ h2 {
 .cta p { margin: 0; color: rgba(255,255,255,0.72); font-size: 1.02rem; }
 
 /* ---------- Footer ---------- */
-footer { background: var(--panel); border-top: 1px solid var(--line-2); }
+footer { background: rgba(255,255,255,0.75); border-top: 1px solid var(--line-2); }
 .footer__cta {
   padding: 0 clamp(20px, 5vw, 56px) 32px;
   max-width: 1220px;
@@ -636,7 +636,7 @@ body { position: relative; }
 /* soft light band that slowly travels across everything */
 body::after {
   content: ""; position: fixed; inset: -25% -35%;
-  pointer-events: none; z-index: 40;
+  pointer-events: none; z-index: -1;
   background: linear-gradient(105deg,
     rgba(255,255,255,0) 40%,
     rgba(255,255,255,0.28) 48%,
@@ -657,6 +657,3 @@ body::after {
   .hero__bg::after { animation: none; }
 }
 
-/* keep images above the animated sheen (sheen sits behind them) */
-.hero__art, .hero__art-img { position: relative; z-index: 41; }
-img { position: relative; z-index: 41; }
