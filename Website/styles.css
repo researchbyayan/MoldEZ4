@@ -64,7 +64,7 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 14px clamp(20px, 5vw, 56px);
+  padding: 20px clamp(20px, 5vw, 56px);
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: saturate(180%) blur(14px);
   -webkit-backdrop-filter: saturate(180%) blur(14px);
@@ -75,8 +75,14 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   align-items: center;
   gap: 12px;
 }
+.nav__mascot {
+  height: 44px;
+  width: 44px;
+  display: block;
+  border-radius: 8px;
+}
 .nav__wordmark {
-  height: 22px;
+  height: 32px;
   width: auto;
   display: block;
 }
@@ -108,10 +114,10 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .nav__links {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 3vw, 30px);
+  gap: clamp(16px, 3vw, 36px);
   font-weight: 600;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 1.02rem;
 }
 .nav__links a { transition: color 0.15s ease; }
 .nav__links a:hover { color: var(--ink); }
